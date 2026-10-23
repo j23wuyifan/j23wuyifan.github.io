@@ -1,0 +1,53 @@
+/* Article backgrounds; the homepage and writing workspace keep their existing layout. */
+body:has(#article-body)
+{
+    isolation:isolate;
+    background:#d8eef8;
+}
+body:has(#article-body)::before
+{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:linear-gradient(#ffffff16,#ffffff16),url("assets/adachi-shimamura-sky.png") center center / cover no-repeat;
+}
+body:has(#article-body) .reading
+{
+    background:rgba(255,255,255,.87);
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:0 12px 45px rgba(60,105,130,.1);
+}
+body:has(#article-body) .page > .back
+{
+    display:inline-block;
+    color:#5f578f;
+    background:rgba(255,255,255,.8);
+    padding:5px 12px;
+    border-radius:6px;
+}
+body:has(#article-body) .page > .subtle
+{
+    display:table;
+    color:#636a81;
+    background:rgba(255,255,255,.78);
+    padding:5px 12px;
+    border-radius:6px;
+}
+body:has(#article-body) footer
+{
+    color:#5e647a;
+    border-color:rgba(255,255,255,.65);
+    background:rgba(255,255,255,.78);
+    padding-left:18px;
+    padding-right:18px;
+    border-radius:8px 8px 0 0;
+}
+@media (max-width:600px)
+{
+    body:has(#article-body) .reading
+    {
+        background:rgba(255,255,255,.92);
+    }
+}

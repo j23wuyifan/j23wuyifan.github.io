@@ -1,5 +1,13 @@
 [
   {
+    "id": "5b874d8c-f05a-416d-81fb-4f0770d5fa9b",
+    "title": "[ZJOI2022] 树",
+    "category": "题解",
+    "date": "2026-10-23",
+    "excerpt": "",
+    "content": "## 题意\n求有多少种两棵树满足，第一棵树的 $fa_i < i$，第二棵树的\n$fa_i > i$，且每个点恰好在其中一棵树内是叶子。答案对 $M$ 取模。\n\n## 思路\n设 $f(S)$ 为第一棵树非叶子结点集合为 $S$ 的方案数，$g(S)$ 为第二棵树的。那么：\n\n$$\nans = \\sum_{S \\cup T = {1,2 \\dots n}，S \\cap T = \\varnothing} f(S) g(T)\n$$\n考虑容斥：\n设 $f(S)$ 表示第一棵树的非叶子集合包含于 $S$ 时构造第一棵树\n的方案数，设 $g(T)$ 表示第二棵树的非叶子集合包含于 $T$ 时构\n造第二棵树的方案数。\n$$\n\\begin{aligned}\nAns\n&= \\sum_{S\\cap T=\\varnothing,\\ S\\cup T=\\{1,2,\\ldots,n\\}} f(S)g(T) \\\\\n&= \\sum_{S\\cap T=\\varnothing,\\ S\\cup T=\\{1,2,\\ldots,n\\}}\n   \\sum_{S'\\subseteq S,\\ T'\\subseteq T}\n   f'(S')g'(T')(-1)^{|S|-|S'|+|T|-|T'|} \\\\\n&= \\sum_{S'\\cap T'=\\varnothing}\n   f'(S')g'(T')(-1)^{n-|S'|-|T'|}2^{n-|S'|-|T'|} \\\\\n&= \\sum_{S'\\cap T'=\\varnothing}\n   f'(S')g'(T')(-2)^{n-|S'|-|T'|}.\n\\end{aligned}\n$$\n\n其中倒数第二个等号的理由是：不属于 $S'$ 和 $T'$ 的那些元素可能在 $S$ 中，也可能在 $T$ 中。\n然后可以 DP。我们设 $dp_{i,j,k}$ 表示确定了 $[1,i]$ 中的点在 $S'$ 和 $T'$ 中的情况，\n$|\\{1,\\ldots,i\\}\\cap S'|=j$，\n$|\\{i+1,\\ldots,n\\}\\cap T'|=k$，\n且我们已经为 $(1,i]$ 选好了第一棵树中的父亲，为 $[1,i)$ 选好了第二棵树中的父亲时，这些父亲的方案数。\n\n转移时，分类讨论 $i$ 在 $S'$ 和 $T'$ 中的情况，然后确定 $i$ 在第一棵树中的父亲和 $i-1$ 在第二棵树中的父亲：\n\n1. $i$ 属于 $S'$，$dp_{i-1,j,k}$ 转移到 $dp_{i,j+1,k}$，系数为 $j\\times k$。\n2. $i$ 属于 $T'$，$dp_{i-1,j,k}$ 转移到 $dp_{i,j,k-1}$，系数为 $j\\times k$。\n3. $i$ 两个都不属于，$dp_{i-1,j,k}$ 转移到 $dp_{i,j,k}$，系数为 $-2\\times j\\times k$。\n## 代码\n\n```cpp\n#include<bits/stdc++.h>\n#define int long long\nusing namespace std;\nconst int N = 510;\nint n, mod, dp[N][N][N];\ninline void add(int &x, int y) {\n\tx = x + y >= mod ? x + y - mod : x + y;\n}\nsigned main() {\n\tcin >> n >> mod;\n\tfor (int i = 1; i < n; i ++) dp[1][1][i] = 1;\n\tfor (int i = 2; i <= n; i ++) {\n\t\tfor (int j = 1; j < i; j ++) {\n\t\t\tfor (int k = 1; k + i - 1 <= n; k ++) {\n\t\t\t\tconst int v = j * k;\n\t\t\t\tadd(dp[i][j + 1][k], dp[i - 1][j][k] * v % mod);\n\t\t\t\tadd(dp[i][j][k - 1], dp[i - 1][j][k] * v % mod);\n\t\t\t\tadd(dp[i][j][k], dp[i - 1][j][k] * (mod - 2) % mod * v % mod); \n\t\t\t}\n\t\t}\n\t\tint ans = 0;\n\t\tfor (int j = 1; j <= i; j ++)\n\t\t\tadd(ans, dp[i][j][0]);\n\t\tcout << ans << '\\n';\n\t} \n\treturn 0;\n} \n```\n"
+  },
+  {
     "id": "hello-world",
     "title": "你好，世界！",
     "category": "生活随记",

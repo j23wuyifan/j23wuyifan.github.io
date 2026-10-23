@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hello-world",
+    "title": "你好，世界！",
+    "category": "生活随记",
+    "date": "2026-10-23",
+    "excerpt": "这是我的第一篇博客。在这里记录算法、题解与学习生活，慢慢积累自己的小小宇宙。",
+    "content": "这是我的第一篇博客。\n\n以后会在这里记录算法、题解与学习生活。\n\n> 每一个想明白的瞬间，都值得被记下来。\n\n下面两篇是博客功能的示例文章，可以在「写博客」中修改、取消选入或删除。"
+  },
+  {
+    "id": "sample-prefix-sum",
+    "title": "【示例题解】从区间求和开始：前缀和",
+    "category": "题解",
+    "date": "2026-10-23",
+    "excerpt": "一次预处理，让每次区间求和变成 O(1)。用一个简单例子整理前缀和的定义、推导与实现。",
+    "content": " > 这是一篇示例题解，用于展示文章排版，可在写作区修改或删除。\n\n## 问题\n\n给定长度为 $n$ 的数组，有多次询问，每次求区间 $[l,r]$ 的元素和。\n\n如果每次都暴力枚举，单次需要 $O(n)$。我们可以预先处理每个前缀的和。\n\n## 推导\n\n定义 $s_i = \\sum_{j=1}^{i} a_j$，并设 $s_0=0$。\n\n那么：\n\n$$\\sum_{i=l}^{r}a_i=s_r-s_{l-1}.$$\n\n因为 $s_r$ 包含前 $r$ 项，减掉前 $l-1$ 项后，恰好剩下区间 $[l,r]$。\n\n## C++17 实现\n\n```cpp\n#include<bits/stdc++.h>\n#define int long long\nusing namespace std;\nconst int N = 2e5 + 10;\nint n, q, s[N];\nsigned main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    cin >> n >> q;\n    for (int i = 1; i <= n; i ++)\n    {\n        cin >> s[i];\n        s[i] += s[i - 1];\n    }\n    while (q --)\n    {\n        int l, r;\n        cin >> l >> r;\n        cout << s[r] - s[l - 1] << '\\n';\n    }\n    return 0;\n}\n```\n\n## 复杂度\n\n预处理 $O(n)$，单次询问 $O(1)$，总时间 $O(n+q)$，空间 $O(n)$。"
+  },
+  {
+    "id": "sample-combination",
+    "title": "【示例笔记】组合数列和的一个证明",
+    "category": "算法笔记",
+    "date": "2026-10-23",
+    "excerpt": "给一个组合恒等式赋予计数意义，有时比直接计算更容易看清它为什么成立。",
+    "content": " > 这是一篇示例算法笔记，用于展示公式与正文排版。\n\n对于 $0\\le r\\le n$，有：\n\n$$\\sum_{i=r}^{n}\\binom{i}{r}=\\binom{n+1}{r+1}.$$\n\n## 按最大元素分类\n\n从 $\\{1,2,\\ldots,n+1\\}$ 中选择 $r+1$ 个数，方案总数为 $\\binom{n+1}{r+1}$。\n\n如果选出的最大数为 $i+1$，其余 $r$ 个数就必须从前 $i$ 个数中选择，因此有 $\\binom{i}{r}$ 种。\n\n最大数可以是 $r+1,r+2,\\ldots,n+1$。按最大数分类后把方案数加起来，就得到左边。\n\n两边数的是同一件事，因此恒等式成立。"
+  }
+]

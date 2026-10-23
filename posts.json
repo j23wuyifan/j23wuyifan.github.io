@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261023-b175c16a118f421a",
+    "title": "[HEOI2016/TJOI2016] 字符串",
+    "category": "题解",
+    "date": "2026-10-23",
+    "excerpt": "题意 给定一个长为 n 的字符串，m 次询问 s[a..b] 的所有子串和 s[c..d] 的最长公共前缀的最大值。 1 \\le n, m \\le 10^5 思路 二分答案，转为判定 s[c..c+mid-1] 是否在 s[a..b] 中出现过。建出 SAM，倍增跳父亲找到 s[",
+    "file": "posts/20261023-b175c16a118f421a.md",
+    "length": 2696,
+    "revision": "8e309236e550d6ac25f026f0198c2e952cf3a35173bfb0c365f5e8a9aa6170d4"
+  },
+  {
     "id": "5b874d8c-f05a-416d-81fb-4f0770d5fa9b",
     "title": "[ZJOI2022] 树",
     "category": "题解",

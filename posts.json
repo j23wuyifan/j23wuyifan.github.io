@@ -4,8 +4,10 @@
     "title": "[ZJOI2022] 树",
     "category": "题解",
     "date": "2026-10-23",
-    "excerpt": "",
-    "content": "## 题意\n求有多少种两棵树满足，第一棵树的 $fa_i < i$，第二棵树的\n$fa_i > i$，且每个点恰好在其中一棵树内是叶子。答案对 $M$ 取模。\n\n## 思路\n设 $f(S)$ 为第一棵树非叶子结点集合为 $S$ 的方案数，$g(S)$ 为第二棵树的。那么：\n\n$$\nans = \\sum_{S \\cup T = {1,2 \\dots n}，S \\cap T = \\varnothing} f(S) g(T)\n$$\n考虑容斥：\n设 $f(S)$ 表示第一棵树的非叶子集合包含于 $S$ 时构造第一棵树\n的方案数，设 $g(T)$ 表示第二棵树的非叶子集合包含于 $T$ 时构\n造第二棵树的方案数。\n$$\n\\begin{aligned}\nAns\n&= \\sum_{S\\cap T=\\varnothing,\\ S\\cup T=\\{1,2,\\ldots,n\\}} f(S)g(T) \\\\\n&= \\sum_{S\\cap T=\\varnothing,\\ S\\cup T=\\{1,2,\\ldots,n\\}}\n   \\sum_{S'\\subseteq S,\\ T'\\subseteq T}\n   f'(S')g'(T')(-1)^{|S|-|S'|+|T|-|T'|} \\\\\n&= \\sum_{S'\\cap T'=\\varnothing}\n   f'(S')g'(T')(-1)^{n-|S'|-|T'|}2^{n-|S'|-|T'|} \\\\\n&= \\sum_{S'\\cap T'=\\varnothing}\n   f'(S')g'(T')(-2)^{n-|S'|-|T'|}.\n\\end{aligned}\n$$\n\n其中倒数第二个等号的理由是：不属于 $S'$ 和 $T'$ 的那些元素可能在 $S$ 中，也可能在 $T$ 中。\n然后可以 DP。我们设 $dp_{i,j,k}$ 表示确定了 $[1,i]$ 中的点在 $S'$ 和 $T'$ 中的情况，\n$|\\{1,\\ldots,i\\}\\cap S'|=j$，\n$|\\{i+1,\\ldots,n\\}\\cap T'|=k$，\n且我们已经为 $(1,i]$ 选好了第一棵树中的父亲，为 $[1,i)$ 选好了第二棵树中的父亲时，这些父亲的方案数。\n\n转移时，分类讨论 $i$ 在 $S'$ 和 $T'$ 中的情况，然后确定 $i$ 在第一棵树中的父亲和 $i-1$ 在第二棵树中的父亲：\n\n1. $i$ 属于 $S'$，$dp_{i-1,j,k}$ 转移到 $dp_{i,j+1,k}$，系数为 $j\\times k$。\n2. $i$ 属于 $T'$，$dp_{i-1,j,k}$ 转移到 $dp_{i,j,k-1}$，系数为 $j\\times k$。\n3. $i$ 两个都不属于，$dp_{i-1,j,k}$ 转移到 $dp_{i,j,k}$，系数为 $-2\\times j\\times k$。\n## 代码\n\n```cpp\n#include<bits/stdc++.h>\n#define int long long\nusing namespace std;\nconst int N = 510;\nint n, mod, dp[N][N][N];\ninline void add(int &x, int y) {\n\tx = x + y >= mod ? x + y - mod : x + y;\n}\nsigned main() {\n\tcin >> n >> mod;\n\tfor (int i = 1; i < n; i ++) dp[1][1][i] = 1;\n\tfor (int i = 2; i <= n; i ++) {\n\t\tfor (int j = 1; j < i; j ++) {\n\t\t\tfor (int k = 1; k + i - 1 <= n; k ++) {\n\t\t\t\tconst int v = j * k;\n\t\t\t\tadd(dp[i][j + 1][k], dp[i - 1][j][k] * v % mod);\n\t\t\t\tadd(dp[i][j][k - 1], dp[i - 1][j][k] * v % mod);\n\t\t\t\tadd(dp[i][j][k], dp[i - 1][j][k] * (mod - 2) % mod * v % mod); \n\t\t\t}\n\t\t}\n\t\tint ans = 0;\n\t\tfor (int j = 1; j <= i; j ++)\n\t\t\tadd(ans, dp[i][j][0]);\n\t\tcout << ans << '\\n';\n\t} \n\treturn 0;\n} \n```\n"
+    "excerpt": "题意 求有多少种两棵树满足，第一棵树的 fa_i < i，第二棵树的 fa_i i，且每个点恰好在其中一棵树内是叶子。答案对 M 取模。 思路 设 f(S) 为第一棵树非叶子结点集合为 S 的方案数，g(S) 为第二棵树的。那么： ans = \\sum_{S \\cup T = {",
+    "file": "posts/5b874d8c-f05a-416d-81fb-4f0770d5fa9b.md",
+    "length": 1938,
+    "revision": "6bb5b4774ad50d600a7d11e37ac7de278edba790523b771c08f29760575f3353"
   },
   {
     "id": "hello-world",
@@ -13,7 +15,9 @@
     "category": "生活随记",
     "date": "2026-10-23",
     "excerpt": "这是我的第一篇博客。在这里记录算法、题解与学习生活，慢慢积累自己的小小宇宙。",
-    "content": "这是我的第一篇博客。\n\n以后会在这里记录算法、题解与学习生活。\n\n> 每一个想明白的瞬间，都值得被记下来。\n\n下面两篇是博客功能的示例文章，可以在「写博客」中修改、取消选入或删除。"
+    "file": "posts/hello-world.md",
+    "length": 90,
+    "revision": "82acbfc82d1bb2788a702c681f4c1e008d60ee9a5661875d0dbd88647ffb83c9"
   },
   {
     "id": "sample-prefix-sum",
@@ -21,7 +25,9 @@
     "category": "题解",
     "date": "2026-10-23",
     "excerpt": "一次预处理，让每次区间求和变成 O(1)。用一个简单例子整理前缀和的定义、推导与实现。",
-    "content": " > 这是一篇示例题解，用于展示文章排版，可在写作区修改或删除。\n\n## 问题\n\n给定长度为 $n$ 的数组，有多次询问，每次求区间 $[l,r]$ 的元素和。\n\n如果每次都暴力枚举，单次需要 $O(n)$。我们可以预先处理每个前缀的和。\n\n## 推导\n\n定义 $s_i = \\sum_{j=1}^{i} a_j$，并设 $s_0=0$。\n\n那么：\n\n$$\\sum_{i=l}^{r}a_i=s_r-s_{l-1}.$$\n\n因为 $s_r$ 包含前 $r$ 项，减掉前 $l-1$ 项后，恰好剩下区间 $[l,r]$。\n\n## C++17 实现\n\n```cpp\n#include<bits/stdc++.h>\n#define int long long\nusing namespace std;\nconst int N = 2e5 + 10;\nint n, q, s[N];\nsigned main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    cin >> n >> q;\n    for (int i = 1; i <= n; i ++)\n    {\n        cin >> s[i];\n        s[i] += s[i - 1];\n    }\n    while (q --)\n    {\n        int l, r;\n        cin >> l >> r;\n        cout << s[r] - s[l - 1] << '\\n';\n    }\n    return 0;\n}\n```\n\n## 复杂度\n\n预处理 $O(n)$，单次询问 $O(1)$，总时间 $O(n+q)$，空间 $O(n)$。"
+    "file": "posts/sample-prefix-sum.md",
+    "length": 751,
+    "revision": "ee8b6c533b1c4b78979b0b46fddbc58de86a4f5708c6551fb3d4c1c10d4ff3a0"
   },
   {
     "id": "sample-combination",
@@ -29,6 +35,8 @@
     "category": "算法笔记",
     "date": "2026-10-23",
     "excerpt": "给一个组合恒等式赋予计数意义，有时比直接计算更容易看清它为什么成立。",
-    "content": " > 这是一篇示例算法笔记，用于展示公式与正文排版。\n\n对于 $0\\le r\\le n$，有：\n\n$$\\sum_{i=r}^{n}\\binom{i}{r}=\\binom{n+1}{r+1}.$$\n\n## 按最大元素分类\n\n从 $\\{1,2,\\ldots,n+1\\}$ 中选择 $r+1$ 个数，方案总数为 $\\binom{n+1}{r+1}$。\n\n如果选出的最大数为 $i+1$，其余 $r$ 个数就必须从前 $i$ 个数中选择，因此有 $\\binom{i}{r}$ 种。\n\n最大数可以是 $r+1,r+2,\\ldots,n+1$。按最大数分类后把方案数加起来，就得到左边。\n\n两边数的是同一件事，因此恒等式成立。"
+    "file": "posts/sample-combination.md",
+    "length": 307,
+    "revision": "6bdb69b0415c01a3c608611999b254084373974f24aa39c784fdc32172fb5b2d"
   }
 ]

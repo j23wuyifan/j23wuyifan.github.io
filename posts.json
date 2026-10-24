@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261024-21647fed9223ed2a",
+    "title": "P9197 [JOI Open 2016] 摩天大楼 / Skyscraper",
+    "category": "题解",
+    "date": "2026-10-24",
+    "excerpt": "题意 将互不相同的 N 个整数 A_1, A_2, \\cdots, A_N 按照一定顺序排列。 假设排列为 f_1, f_2, \\cdots, f_N，要求：| f_1 - f_2| + | f_2 - f_3| + \\cdots + | f_{N-1} - f_N| \\leq ",
+    "file": "posts/20261024-21647fed9223ed2a.md",
+    "length": 1619,
+    "revision": "4e5bc09d79b31294c86148f255453fa6cad6cf8f764953927b910a7c6aa2abd7"
+  },
+  {
     "id": "20261023-8334b9631acc59c4",
     "title": "P11959 「ZHQOI R1」诗歌",
     "category": "题解",
@@ -28,26 +38,6 @@
     "file": "posts/hello-world.md",
     "length": 90,
     "revision": "82acbfc82d1bb2788a702c681f4c1e008d60ee9a5661875d0dbd88647ffb83c9"
-  },
-  {
-    "id": "sample-prefix-sum",
-    "title": "【示例题解】从区间求和开始：前缀和",
-    "category": "题解",
-    "date": "2026-10-23",
-    "excerpt": "一次预处理，让每次区间求和变成 O(1)。用一个简单例子整理前缀和的定义、推导与实现。",
-    "file": "posts/sample-prefix-sum.md",
-    "length": 751,
-    "revision": "ee8b6c533b1c4b78979b0b46fddbc58de86a4f5708c6551fb3d4c1c10d4ff3a0"
-  },
-  {
-    "id": "sample-combination",
-    "title": "【示例笔记】组合数列和的一个证明",
-    "category": "算法笔记",
-    "date": "2026-10-23",
-    "excerpt": "给一个组合恒等式赋予计数意义，有时比直接计算更容易看清它为什么成立。",
-    "file": "posts/sample-combination.md",
-    "length": 307,
-    "revision": "6bdb69b0415c01a3c608611999b254084373974f24aa39c784fdc32172fb5b2d"
   },
   {
     "id": "20261023-b175c16a118f421a",

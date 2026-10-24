@@ -1,23 +1,23 @@
 [
   {
-    "id": "20261024-21647fed9223ed2a",
-    "title": "P9197 [JOI Open 2016] 摩天大楼 / Skyscraper",
+    "id": "20261024-01d225a0f2760385",
+    "title": "[NOI2018] 你的名字",
     "category": "题解",
     "date": "2026-10-24",
-    "excerpt": "题意 将互不相同的 N 个整数 A_1, A_2, \\cdots, A_N 按照一定顺序排列。 假设排列为 f_1, f_2, \\cdots, f_N，要求：| f_1 - f_2| + | f_2 - f_3| + \\cdots + | f_{N-1} - f_N| \\leq ",
-    "file": "posts/20261024-21647fed9223ed2a.md",
-    "length": 1619,
-    "revision": "4e5bc09d79b31294c86148f255453fa6cad6cf8f764953927b910a7c6aa2abd7"
+    "excerpt": "题意 给定一个字符串 S，有 Q 次询问。 每次给出字符串 T 和区间 [l,r]，求 T 中有多少个本质不同的非空子串，没有在 S[l\\ldots r] 中出现过。 其中，本质不同指字符串内容不同，相同子串出现多次只算一次。 数据范围：|S|\\le 5\\times10^5，Q\\",
+    "file": "posts/20261024-01d225a0f2760385.md",
+    "length": 3832,
+    "revision": "e428fe02ab349645b1b16cbb5d3ef0c9ac1056b326e8232f428f87185752b2a0"
   },
   {
-    "id": "20261023-8334b9631acc59c4",
-    "title": "P11959 「ZHQOI R1」诗歌",
+    "id": "20261023-b175c16a118f421a",
+    "title": "[HEOI2016/TJOI2016] 字符串",
     "category": "题解",
     "date": "2026-10-23",
-    "excerpt": "思路 注意到一个字符串是动听的充要条件是对于所有的 s_i = s_j，j - i \\ge m + 3。我们可以对每个 x \\in U 分别计算答案。考虑 DP，设计状态 f_i 表示 i + 1 可以填 x 的方案数。转移考虑是不是 i+1 才刚刚能填 x，若之前就能填 x，有",
-    "file": "posts/20261023-8334b9631acc59c4.md",
-    "length": 1348,
-    "revision": "433f0299c8bd93396c68354c46822c12e3140ccad864035a353dcd75b8152a5c"
+    "excerpt": "题意 给定一个长为 n 的字符串，m 次询问 s[a..b] 的所有子串和 s[c..d] 的最长公共前缀的最大值。 1 \\le n, m \\le 10^5 思路 二分答案，转为判定 s[c..c+mid-1] 是否在 s[a..b] 中出现过。建出 SAM，倍增跳父亲找到 s[",
+    "file": "posts/20261023-b175c16a118f421a.md",
+    "length": 2696,
+    "revision": "8e309236e550d6ac25f026f0198c2e952cf3a35173bfb0c365f5e8a9aa6170d4"
   },
   {
     "id": "5b874d8c-f05a-416d-81fb-4f0770d5fa9b",
@@ -40,13 +40,23 @@
     "revision": "82acbfc82d1bb2788a702c681f4c1e008d60ee9a5661875d0dbd88647ffb83c9"
   },
   {
-    "id": "20261023-b175c16a118f421a",
-    "title": "[HEOI2016/TJOI2016] 字符串",
+    "id": "20261023-8334b9631acc59c4",
+    "title": "P11959 「ZHQOI R1」诗歌",
     "category": "题解",
     "date": "2026-10-23",
-    "excerpt": "题意 给定一个长为 n 的字符串，m 次询问 s[a..b] 的所有子串和 s[c..d] 的最长公共前缀的最大值。 1 \\le n, m \\le 10^5 思路 二分答案，转为判定 s[c..c+mid-1] 是否在 s[a..b] 中出现过。建出 SAM，倍增跳父亲找到 s[",
-    "file": "posts/20261023-b175c16a118f421a.md",
-    "length": 2696,
-    "revision": "8e309236e550d6ac25f026f0198c2e952cf3a35173bfb0c365f5e8a9aa6170d4"
+    "excerpt": "思路 注意到一个字符串是动听的充要条件是对于所有的 s_i = s_j，j - i \\ge m + 3。我们可以对每个 x \\in U 分别计算答案。考虑 DP，设计状态 f_i 表示 i + 1 可以填 x 的方案数。转移考虑是不是 i+1 才刚刚能填 x，若之前就能填 x，有",
+    "file": "posts/20261023-8334b9631acc59c4.md",
+    "length": 1348,
+    "revision": "433f0299c8bd93396c68354c46822c12e3140ccad864035a353dcd75b8152a5c"
+  },
+  {
+    "id": "20261024-21647fed9223ed2a",
+    "title": "P9197 [JOI Open 2016] 摩天大楼 / Skyscraper",
+    "category": "题解",
+    "date": "2026-10-24",
+    "excerpt": "题意 将互不相同的 N 个整数 A_1, A_2, \\cdots, A_N 按照一定顺序排列。 假设排列为 f_1, f_2, \\cdots, f_N，要求：| f_1 - f_2| + | f_2 - f_3| + \\cdots + | f_{N-1} - f_N| \\leq ",
+    "file": "posts/20261024-21647fed9223ed2a.md",
+    "length": 1619,
+    "revision": "4e5bc09d79b31294c86148f255453fa6cad6cf8f764953927b910a7c6aa2abd7"
   }
 ]

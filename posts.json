@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261027-44c36f3850f33e28",
+    "title": "P17788 樽见不是罪过",
+    "category": "题解",
+    "date": "2026-10-27",
+    "excerpt": "题意 给定 n,k 和数组 x_0,\\dots,x_{k-1}。 枚举所有长度不限的正整数序列 A，要求： - 元素之和为 n； - A_i 是 x_{i\\bmod k} 的二进制子集。 每个序列的贡献为首尾相接后，所有相邻两数之和的乘积： \\prod_{i=0}^{|A|-1}",
+    "file": "posts/20261027-44c36f3850f33e28.md",
+    "length": 2485,
+    "revision": "390a921d3ff0447e24a762f273d3833cd1411e526a745ce3421a27a837c5e267"
+  },
+  {
     "id": "20261026-bccc158a62ccc617",
     "title": "P16500 【MX-S14-T3】「KWOI R2」XOR and Sum of Subsets",
     "category": "题解",

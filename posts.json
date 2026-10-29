@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261029-231b046a52d3a787",
+    "title": "P17505 [ICPC 2026 Wuhan I] Iroha and the Kingdom of Construction",
+    "category": "题解",
+    "date": "2026-10-29",
+    "excerpt": "题意 给定一个长度为 2n 的随机序列，其中 1\\sim n 各出现两次。 按顺序将每个数放入至多 260 个栈中的一个。之后，每次可以选择两个不同的栈，若栈顶相同，就同时弹出。 构造每个数所属的栈，使所有数最终都能被消除。只需输出分配方案，无需输出消除过程。 n\\le 5\\ti",
+    "file": "posts/20261029-231b046a52d3a787.md",
+    "length": 1255,
+    "revision": "58aacac3d510b66a9bedda55f0b39303a4c1b8490d00ac0583477a8448f7edb8"
+  },
+  {
     "id": "20261028-d6dde2a5bd544dcb",
     "title": "P11695 [JRKSJ ExR] 昼寝",
     "category": "题解",

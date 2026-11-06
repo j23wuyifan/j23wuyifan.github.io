@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261106-5d5d127be6e3027b",
+    "title": "CF891E Lust",
+    "category": "题解",
+    "date": "2026-11-06",
+    "excerpt": "题意 给定 n 个数，进行 k 次操作。 每次等概率随机选一个位置 x，将其余所有数的乘积加入答案，然后令 a_x 减 1。 求最终答案的期望，对 10^9+7 取模。 n \\le 5\\times 10^3,k \\le 10^9 思路 观察一次操作乘积的变化： \\prod_i a",
+    "file": "posts/20261106-5d5d127be6e3027b.md",
+    "length": 1438,
+    "revision": "30ffd146899f3d8cfd6e204f4b614f0b1106c8e61f9b68dd546c5c2371820887"
+  },
+  {
     "id": "20261106-bede6cc68032a52e",
     "title": "P6633 [ZJOI2020] 抽卡",
     "category": "题解",

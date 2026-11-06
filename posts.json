@@ -6,8 +6,8 @@
     "date": "2026-11-06",
     "excerpt": "题意 有 m 种卡牌，编号为 a_1,\\dots,a_m。 每次独立、等概率抽到其中一种，重复抽到不增加已有卡牌。 不断抽卡，直到拥有的卡牌中包含 k 个连续整数编号，求抽卡次数的期望，对 998244353 取模。 1 \\le m \\le 2×10^5,1 \\le a_i \\l",
     "file": "posts/20261106-bede6cc68032a52e.md",
-    "length": 1821,
-    "revision": "9086b983a7a463c702e9f7de96edca0bea5dff2d131e91f6671aeb4d1ee2fee5"
+    "length": 3656,
+    "revision": "979cf364725889e4bbf42f7d1bac363aa2807a5fa45cd410dae0cd933ec60352"
   },
   {
     "id": "20261106-18fefe0478af46ed",

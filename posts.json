@@ -1,5 +1,25 @@
 [
   {
+    "id": "20261106-18fefe0478af46ed",
+    "title": "CF623E Transforming Sequence",
+    "category": "题解",
+    "date": "2026-11-06",
+    "excerpt": "题意 给定 n,k，求有多少个长度为 n 的序列，满足每个 a_i\\in[1,2^k-1]，且序列 a 的前缀按位或严格递增。答案对 10^9+7 取模。 n, k \\le 3 \\times 10^4 思路 www，sxy 说这题太直接了。我还不会做。 n k 必然无解。 设 f",
+    "file": "posts/20261106-18fefe0478af46ed.md",
+    "length": 3050,
+    "revision": "16ab8c6c434bc4528dc6268d0c20d02d5822017ff07f2276551d0c7f8244d7f9"
+  },
+  {
+    "id": "20261106-ccf6ec8af5fd861f",
+    "title": "CF755G PolandBall and Many Other Balls",
+    "category": "题解",
+    "date": "2026-11-06",
+    "excerpt": "题意 给定一排 n 个球。从中选出恰好 m 个互不重叠的组，每组包含一个球或两个相邻的球，允许有球不被选。对每个 m=1,2,\\ldots,k，求分组方案数，答案对 998244353 取模。 n \\le 10^9,k<2^{15} 思路 设计 DP 状态 f_{i,j} 表示前",
+    "file": "posts/20261106-ccf6ec8af5fd861f.md",
+    "length": 1147,
+    "revision": "47353af73df0bf7bb34cfa2e4a4fde6a87d24e2da54f9fc795a9740ab04efa78"
+  },
+  {
     "id": "20261029-231b046a52d3a787",
     "title": "P17505 [ICPC 2026 Wuhan I] Iroha and the Kingdom of Construction",
     "category": "题解",

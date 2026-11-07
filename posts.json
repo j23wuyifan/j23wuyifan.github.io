@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261107-e1dfd6b4103a5510",
+    "title": "P5519 [MtOI2019] 埋骨于弘川",
+    "category": "题解",
+    "date": "2026-11-07",
+    "excerpt": "题意 定义 f(x,y) = \\begin{cases} 2 & , x=1 \\\\ 2^x& , 2\\le x \\le 42,y = 0 \\\\ \\prod\\limits_{i=1}^{42} f(x-i,y)^i & , x \\ge 43,y = 0 \\\\ f(x-1,y)f(x",
+    "file": "posts/20261107-e1dfd6b4103a5510.md",
+    "length": 4299,
+    "revision": "0c248c73b35b93dbf52833e604935c786893f09a9f113bb212835a56b82b5ec6"
+  },
+  {
     "id": "20261107-a75779514e09b56c",
     "title": "常系数齐次线性递推",
     "category": "算法笔记",

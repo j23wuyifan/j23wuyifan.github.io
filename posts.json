@@ -1,5 +1,35 @@
 [
   {
+    "id": "20261107-a75779514e09b56c",
+    "title": "常系数齐次线性递推",
+    "category": "算法笔记",
+    "date": "2026-11-07",
+    "excerpt": "思路 设生成函数 A(x)=\\sum_{i\\ge0}a_ix^i，令 Q(x)=1-\\sum_{i=1}^k f_ix^i 由递推式，对 i\\ge k 有 [x^i](A(x)Q(x))=0。因此 A(x)=P(x)/Q(x)，其中分子只需用初值计算： P(x)=\\left(\\s",
+    "file": "posts/20261107-a75779514e09b56c.md",
+    "length": 2615,
+    "revision": "c516f13a8de3c2932b634515c536253771ae514d73217935db26fc340886a3ff"
+  },
+  {
+    "id": "20261107-7da63bab232b4d92",
+    "title": "P5850 calc加强版",
+    "category": "题解",
+    "date": "2026-11-07",
+    "excerpt": "题意 给定 k,m，对于每个 n=1,\\ldots,m： 从 1,\\ldots,k 中选出 n 个互不相同的数并排列，求所有这些序列的元素乘积之和，对 998244353 取模。 m \\le 5 \\times 10^5,k < 998244353 思路 简单题。 先把序列变无序，",
+    "file": "posts/20261107-7da63bab232b4d92.md",
+    "length": 1386,
+    "revision": "eb2aab2c8e6e09395d2195d7c67c75c90d2574b5f5cea5ffc1f0ed7f9189af24"
+  },
+  {
+    "id": "20261106-b14a8ccde815b848",
+    "title": "CF923E Perpetual Subtraction",
+    "category": "题解",
+    "date": "2026-11-06",
+    "excerpt": "题意 最初黑板上写有一个数字 x。你需要重复以下操作若干次： 1. 取下当前黑板上的数字 x 并擦除； 2. 从区间 [0,x]（包含 x）中均匀随机选择一个整数，并将其写在黑板上。 给定初始数字的概率分布和操作次数，求经过 m 次操作后，最终数字的概率分布。 n \\le 10^",
+    "file": "posts/20261106-b14a8ccde815b848.md",
+    "length": 1540,
+    "revision": "58becf3ee391db179a2a9b1b0ec41af15a876f4b972eb799b06a15fc086dc67e"
+  },
+  {
     "id": "20261106-5d5d127be6e3027b",
     "title": "CF891E Lust",
     "category": "题解",

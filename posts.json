@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261111-91eb09db76de0f41",
+    "title": "P11691 [Ynoi Hard Round 2025] 《十字神名的预言者》慈悲（色彩）",
+    "category": "题解",
+    "date": "2026-11-11",
+    "excerpt": "题意 有 n 个带权点和 m 个按编号排列的半平面。每次询问 [l,r]，求同时满足第 l 到第 r 个半平面限制的所有点的权值和。权值是黑盒 Data，所有询问合计最多调用 4\\times10^7 次加减法。 n \\le 2\\times 10^5,m \\le 10^4,q \\l",
+    "file": "posts/20261111-91eb09db76de0f41.md",
+    "length": 7106,
+    "revision": "7d2705e7eea9ab673fe0533e05383da1b7af72fb604d918d2eaead9a869ec38d"
+  },
+  {
     "id": "20261109-7d563e31c8d1cf26",
     "title": "P17858 「GLR-R5」处暑 / defervit",
     "category": "题解",

@@ -1,5 +1,35 @@
 [
   {
+    "id": "20261113-c810d3a014524aaa",
+    "title": "P17610 「RiOI-8」月代 ユキ",
+    "category": "题解",
+    "date": "2026-11-13",
+    "excerpt": "题意 给定 n 个互不相同的正整数，求所有子集的最小公倍数 \\operatorname{lcm} 共有多少种不同的值。空集的 \\operatorname{lcm} 规定为 1。 每组数据输出答案对 10^9+7 取模的结果。 T\\le 10，n,a_i\\le 1600 思路 这题",
+    "file": "posts/20261113-c810d3a014524aaa.md",
+    "length": 4414,
+    "revision": "29731453478f5be739310d29a4c258c06ca18506f5f7e8e789c5ff10bf8c4ddb"
+  },
+  {
+    "id": "20261113-1bf52421e8415cef",
+    "title": "P17598 「RiOI-8」二階堂 ヒロ",
+    "category": "题解",
+    "date": "2026-11-13",
+    "excerpt": "题意 给定长度为 n 的序列 a 和一个 n\\times n 的 01 矩阵 F。每次询问区间 [l,r]，求其中有多少个有序下标对 (i,j) 满足 F_{a_i,a_j}=1。 允许 i=j。当 i\\ne j 时，(i,j) 和 (j,i) 分别判断，因为 F 可能不对称。 ",
+    "file": "posts/20261113-1bf52421e8415cef.md",
+    "length": 3257,
+    "revision": "49f1aaa693f12a1beb8e9dc5b9655295c4db9160fab807775d54c207dbbe5240"
+  },
+  {
+    "id": "20261113-8bf61fe153dfbeb9",
+    "title": "P17603 「RiOI-8」宝生 マーゴ",
+    "category": "题解",
+    "date": "2026-11-13",
+    "excerpt": "题意 给定长度为 n 的序列 b，其中 0 表示通配符。另有一个随机序列 a，每个 a_i 独立等概率取 1\\sim m 中的整数。 你只能根据 b 选出若干个互不相交的长度为 m 的区间。若某个所选区间内的 a_i 恰好构成 1\\sim m 的一个排列，且所有非零的 b_i 都",
+    "file": "posts/20261113-8bf61fe153dfbeb9.md",
+    "length": 3296,
+    "revision": "bef81b57dd3266a809034a95dd1950705d31d70b22fc77aadf7ba7cd86162bed"
+  },
+  {
     "id": "20261111-91eb09db76de0f41",
     "title": "P11691 [Ynoi Hard Round 2025] 《十字神名的预言者》慈悲（色彩）",
     "category": "题解",

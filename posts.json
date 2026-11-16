@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261116-1c8853e3ab57cd2e",
+    "title": "CF1508D Swap Pass",
+    "category": "题解",
+    "date": "2026-11-16",
+    "excerpt": "题意 给定平面上 n 个点，任意三点不共线。点 i 的标签为 a_i，所有标签构成 1\\sim n 的排列。 每次选两个点，交换它们的标签，并画出连接它们的线段。每条线段最多画一次，任意两条线段只能在公共端点处相交。 求任意一组操作，使每个点 i 的标签变为 i。无解输出 -1，",
+    "file": "posts/20261116-1c8853e3ab57cd2e.md",
+    "length": 1856,
+    "revision": "2f2ef1fd9384f7aecacf895358b03cbc53a473e2f566f3c3fe7256a4b0dc2eb3"
+  },
+  {
     "id": "20261116-beb0c172ae618a4f",
     "title": "P17608 「RiOI-8」沢渡 ココ",
     "category": "题解",

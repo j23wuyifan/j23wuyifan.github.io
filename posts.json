@@ -1,5 +1,15 @@
 [
   {
+    "id": "20261117-54c9b665ca5031b5",
+    "title": "CF1175G Yet Another Partiton Problem",
+    "category": "题解",
+    "date": "2026-11-17",
+    "excerpt": "题意 给定一个数组 a_1, a_2, \\dots, a_n，你需要将其分成 k 个子段。 一个子段 a_l, a_{l+1}, \\dots, a_r 的权值定义为 (r - l + 1) \\cdot \\max\\limits_{l \\le i \\le r}(a_i)。一个划分的权",
+    "file": "posts/20261117-54c9b665ca5031b5.md",
+    "length": 2585,
+    "revision": "394bbc6becabc2c291afc66977b09a3e05493799fa76d9a2ee70ba61f876cb30"
+  },
+  {
     "id": "20261116-1c8853e3ab57cd2e",
     "title": "CF1508D Swap Pass",
     "category": "题解",

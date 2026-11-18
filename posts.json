@@ -1,5 +1,35 @@
 [
   {
+    "id": "20261118-978b2c22997de4a1",
+    "title": "P5327 [ZJOI2019] 语言",
+    "category": "题解",
+    "date": "2026-11-18",
+    "excerpt": "题意 给树上 m 条路径，统计有多少无序点对同时落在至少一条给定路径上。n,m\\le10^5。 思路 先给个我自己的做法： 考虑如果树是一条链怎么做，相当于是矩形加，查询矩形内 0 的数有多少个。扫描线+线段树容易做到 O(n \\log n)。 再考虑一般的情况。考虑树剖，一条路",
+    "file": "posts/20261118-978b2c22997de4a1.md",
+    "length": 6038,
+    "revision": "ee4d8a06bf169ada39f4a8ef01b050038759c724e3b04bee77dfa8fc4770d40e"
+  },
+  {
+    "id": "20261118-0d8f5b2ff36f3e43",
+    "title": "CF809D Hitchhiking in the Baltic States",
+    "category": "题解",
+    "date": "2026-11-18",
+    "excerpt": "题意 给定 n 个城市，第 i 个城市可以在 [l_i,r_i] 内任选一个整数日期访问，也可以跳过。 要求选中的城市编号严格递增，访问日期也严格递增。求最多能访问多少个城市。 思路 简单题。 题意相当于是把每个位置选一个 p_i \\in [l_i,r_i]，求 LIS。 设 f",
+    "file": "posts/20261118-0d8f5b2ff36f3e43.md",
+    "length": 1705,
+    "revision": "99b61760fbe184383239c0cff3e64ef9e80c73c82e9092273cd602dbaee78c2e"
+  },
+  {
+    "id": "20261118-5108f20f1c04d92e",
+    "title": "CF1034D Intervals of Intervals",
+    "category": "题解",
+    "date": "2026-11-18",
+    "excerpt": "题意 给定 n 个数轴区间。每选一对下标 l\\le r，就得到一个价值：第 l 到第 r 个区间的并集长度，重叠部分只算一次。 求所有 \\frac{n(n+1)}2 个下标对中，最大的 k 个价值之和。 n \\le 3 \\times 10^5,a_i \\le 10^9 思路 将 ",
+    "file": "posts/20261118-5108f20f1c04d92e.md",
+    "length": 3045,
+    "revision": "33ba20fe66a0170107c496fd5e415aa2f081735422d723fefdf44e899cea30d7"
+  },
+  {
     "id": "20261117-54c9b665ca5031b5",
     "title": "CF1175G Yet Another Partiton Problem",
     "category": "题解",

@@ -1,5 +1,25 @@
 [
   {
+    "id": "20261119-7355ac53f97076f7",
+    "title": "CF526G Spiders Evil Plan",
+    "category": "题解",
+    "date": "2026-11-19",
+    "excerpt": "题意 带权树，每次给 x,y，选 y 条路径，使它们的并连通、经过 x，覆盖边权和最大。强制在线。 n \\le 10^5 思路 选 y 条经过 x 的路径等价于选一个以 x 为根 2y 个叶子的联通子树。构造就是将叶子按照 dfn 序排序，隔 k 个的连边即可。 考虑如何对一个 ",
+    "file": "posts/20261119-7355ac53f97076f7.md",
+    "length": 3099,
+    "revision": "8ca8f4ea05a221dbb25b996b133d43a833d4344b89ce78ae177f950d15e28355"
+  },
+  {
+    "id": "20261118-4ea5eac5afac0de3",
+    "title": "P9265 [PA 2022] Chodzenie po linie",
+    "category": "题解",
+    "date": "2026-11-18",
+    "excerpt": "题意 给定一个排列 p，把每个位置看作一个点，每个逆序对连一条无向边。对每个点，求它到同一连通块内所有点的最短距离之和。 n \\le 2 \\times 10^5 思路 挺厉害的题。 先求出所有的 j<i 的贡献，坐标翻转再做一遍就可以得出答案。 若 \\max(p_1 \\dots ",
+    "file": "posts/20261118-4ea5eac5afac0de3.md",
+    "length": 3221,
+    "revision": "2eb1cf15b5e6b28618a79b83e811643423a83c2285549bfe595c27a56e00ad27"
+  },
+  {
     "id": "20261118-978b2c22997de4a1",
     "title": "P5327 [ZJOI2019] 语言",
     "category": "题解",
